@@ -73,10 +73,10 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-- [ ] Só usa o contexto da conversa para responder.
-- [ ] Respostas incluem fonte da informação
-- [ ] Quando não sabe, admite e redireciona
-- [ ] Não faz recomendações de investimento.
+- [X] Só usa o contexto da conversa para responder.
+- [X] Respostas incluem fonte da informação
+- [X] Quando não sabe, admite e redireciona
+- [X] Não faz recomendações de investimento.
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?

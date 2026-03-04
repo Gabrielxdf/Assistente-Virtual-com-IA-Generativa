@@ -6,21 +6,16 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 | Arquivo | Formato | Utilização no Agente |
 |---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores |
-| `perfil_investidor.json` | JSON | Personalizar recomendações |
-| `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
-| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente |
+| `6-melhores-investimentos.pdf` | PDF | Explica os 6 melhores tipos de investimentos e seus objetivos |
+| `Mapa-Investidor-de-Verdade.pdf` | PDF | Indica os 3 primeiros passos para se começar a investir na metodologia de verdade, que usa a abordagem fundamentalista |
+| `carteira de verdade.txt` | TXT | Carteira de investimentos planejada utilizando a metodologia de verdade, descrevendo os 6 tipos de investimentos e o objetivo de cada um |
+| `Tabela-criterios-REITs.xlsx` | XLSX | Os fundamentos para escolher um Reit |
+| `Tabela-criterios-Stocks-1.xlsx` | XLSX | Os fundamentos para escolher um Stock |
+| `Tabela-fundamentos-FIIs.pdf` | PDF | Os fundamentos para escolher um Fundo de Investimento Imobiliário (Fii) |
+| `Tabela-fundamentos-acoes.pdf` | PDF | Os fundamentos para escolher uma ação na bolsa |
 
 > [!TIP]
 > **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio.
-
----
-
-## Adaptações nos Dados
-
-> Você modificou ou expandiu os dados mockados? Descreva aqui.
-
-[Sua descrição aqui]
 
 ---
 
@@ -29,17 +24,20 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 ### Como os dados são carregados?
 > Descreva como seu agente acessa a base de conhecimento.
 
-[ex: Os JSON/CSV são carregados no início da sessão e incluídos no contexto do prompt]
+TODO
+[ex: Os dados são carregados no início da sessão e incluídos no contexto do prompt]
 
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
 
+TODO
 [Sua descrição aqui]
 
 ---
 
 ## Exemplo de Contexto Montado
 
+TODO
 > Mostre um exemplo de como os dados são formatados para o agente.
 
 ```

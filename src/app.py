@@ -1,4 +1,3 @@
-#pip install pandas pdfplumber openpyxl streamlit requests
 import pandas as pd
 import json
 import pdfplumber

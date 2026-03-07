@@ -83,18 +83,6 @@ Descreva como você avalia a qualidade do seu agente:
 
 ---
 
-### 6. Pitch
-
-Grave um **pitch de 3 minutos** (estilo elevador) apresentando:
-
-- Qual problema seu agente resolve?
-- Como ele funciona na prática?
-- Por que essa solução é inovadora?
-
-📄 **Template:** [`docs/05-pitch.md`](./docs/05-pitch.md)
-
----
-
 ## Ferramentas Sugeridas
 
 Todas as ferramentas abaixo possuem versões gratuitas:

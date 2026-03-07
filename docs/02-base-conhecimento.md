@@ -14,9 +14,6 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 | `Tabela-fundamentos-FIIs.pdf` | PDF | Os fundamentos para escolher um Fundo de Investimento Imobiliário (Fii) |
 | `Tabela-fundamentos-acoes.pdf` | PDF | Os fundamentos para escolher uma ação na bolsa |
 
-> [!TIP]
-> **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio.
-
 ---
 
 ## Estratégia de Integração

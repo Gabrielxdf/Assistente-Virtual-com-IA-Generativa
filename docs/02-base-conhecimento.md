@@ -22,10 +22,31 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 ## Estratégia de Integração
 
 ### Como os dados são carregados?
-> Descreva como seu agente acessa a base de conhecimento.
 
-TODO
-[ex: Os dados são carregados no início da sessão e incluídos no contexto do prompt]
+Existem duas possibilidades, injetar os dados diretamente no prompt (Ctrl + C, Ctrl + V) ou carregar os arquivos via código, como no exemplo abaixo:
+
+```python
+import pandas as pd
+import json
+import pdfplumber
+
+# ============ CARREGAR DADOS ============
+with pdfplumber.open('./data/6-melhores-investimentos.pdf') as pdf:
+    melhores_investimentos = "\n".join(page.extract_text() for page in pdf.pages)
+
+with pdfplumber.open('./data/Mapa-Investidor-de-Verdade.pdf') as pdf:
+    mapa_investidor = "\n".join(page.extract_text() for page in pdf.pages)
+
+with pdfplumber.open('./data/Tabela-fundamentos-acoes.pdf') as pdf:
+    fundamentos_acoes = "\n".join(page.extract_text() for page in pdf.pages)
+
+with pdfplumber.open('./data/Tabela-fundamentos-FIIs.pdf') as pdf:
+    fundamentos_fiis = "\n".join(page.extract_text() for page in pdf.pages)
+
+carteira = pd.read_csv('./data/carteira de verdade.txt', sep=None, engine='python')
+fundamentos_reits = pd.read_excel('./data/Tabela-criterios-REITs.xlsx')
+fundamentos_stocks = pd.read_excel('./data/Tabela-criterios-Stocks-1.xlsx')
+```
 
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?

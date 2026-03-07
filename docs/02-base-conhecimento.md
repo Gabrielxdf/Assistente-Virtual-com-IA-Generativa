@@ -30,22 +30,27 @@ import pandas as pd
 import json
 import pdfplumber
 
+# ============ FUNÇÃO PARA LER PDF ============
+def ler_pdf(caminho):
+    texto = []
+    with pdfplumber.open(caminho) as pdf:
+        for page in pdf.pages:
+            conteudo = page.extract_text()
+            if conteudo:
+                texto.append(conteudo)
+    return "\n".join(texto)
+
 # ============ CARREGAR DADOS ============
-with pdfplumber.open('./data/6-melhores-investimentos.pdf') as pdf:
-    melhores_investimentos = "\n".join(page.extract_text() for page in pdf.pages)
+melhores_investimentos = ler_pdf('./data/6-melhores-investimentos.pdf')
+mapa_investidor = ler_pdf('./data/Mapa-Investidor-de-Verdade.pdf')
+fundamentos_acoes = ler_pdf('./data/Tabela-fundamentos-acoes.pdf')
+fundamentos_fiis = ler_pdf('./data/Tabela-fundamentos-FIIs.pdf')
 
-with pdfplumber.open('./data/Mapa-Investidor-de-Verdade.pdf') as pdf:
-    mapa_investidor = "\n".join(page.extract_text() for page in pdf.pages)
+with open('./data/carteira de verdade.txt', 'r', encoding='utf-8') as f:
+    carteira = f.read()
 
-with pdfplumber.open('./data/Tabela-fundamentos-acoes.pdf') as pdf:
-    fundamentos_acoes = "\n".join(page.extract_text() for page in pdf.pages)
-
-with pdfplumber.open('./data/Tabela-fundamentos-FIIs.pdf') as pdf:
-    fundamentos_fiis = "\n".join(page.extract_text() for page in pdf.pages)
-
-carteira = pd.read_csv('./data/carteira de verdade.txt', sep=None, engine='python')
-fundamentos_reits = pd.read_excel('./data/Tabela-criterios-REITs.xlsx')
-fundamentos_stocks = pd.read_excel('./data/Tabela-criterios-Stocks-1.xlsx')
+fundamentos_reits = pd.read_excel('./data/Tabela-criterios-REITs.xlsx').to_string()
+fundamentos_stocks = pd.read_excel('./data/Tabela-criterios-Stocks-1.xlsx').to_string()
 ```
 
 ### Como os dados são usados no prompt?
